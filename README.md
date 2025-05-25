@@ -34,3 +34,7 @@ php bin/console doctrine:fixtures:load
 Lancer le serveur local:
 symfony server:start
 
+J'ai créé le projet Symfony en suivant la documentation disponible à l'adresse suivante : https://docs.yoanncoualan.com/symfony.
+J'ai utilisé les lignes de commande pour générer les entités, les contrôleurs et configurer la base de données.
+La base a ensuite été remplie avec des données fictives grâce à l'utilisation de Faker via les fixtures.
+Documentation Faker utilisée : https://fakerphp.github.io/
