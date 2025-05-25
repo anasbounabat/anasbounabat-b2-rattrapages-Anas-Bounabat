@@ -89,7 +89,7 @@
   </div>
 
   <div class="mt-4">
-    <form method="post" action="{{ path('app_employee_delete', {'id': employee.id}) }}" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cet employé ?');">
+    <form method="post" action="{{ path('app_employee_delete', {'id': employee.id}) }}">
       <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ employee.id) }}">
       <button class="btn btn-danger">Supprimer</button>
     </form>

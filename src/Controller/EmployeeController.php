@@ -30,6 +30,10 @@ final class EmployeeController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $now = new \DateTime();
+            $employee->setCreatedAt($now);
+            $employee->setUpdatedAt($now);
+            
             $entityManager->persist($employee);
             $entityManager->flush();
 

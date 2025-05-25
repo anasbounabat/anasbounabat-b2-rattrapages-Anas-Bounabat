@@ -30,7 +30,7 @@ class Restaurant
     /**
      * @var Collection<int, Employee>
      */
-    #[ORM\OneToMany(targetEntity: Employee::class, mappedBy: 'restaurant')]
+    #[ORM\OneToMany(targetEntity: Employee::class, mappedBy: 'restaurant', cascade: ['remove'])]
     private Collection $employees;
 
     public function __construct()

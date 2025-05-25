@@ -83,7 +83,7 @@
               <td>
                 <a href="{{ path('app_employee_show', {'id': employee.id}) }}" class="btn btn-sm btn-primary">Voir</a>
                 <a href="{{ path('app_employee_edit', {'id': employee.id}) }}" class="btn btn-sm btn-primary">Modifier</a>
-                <form method="post" action="{{ path('app_employee_delete', {'id': employee.id}) }}" style="display: inline-block" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cet employé ?');">
+                <form method="post" action="{{ path('app_employee_delete', {'id': employee.id}) }}" style="display: inline-block">
                   <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ employee.id) }}">
                   <button class="btn btn-sm btn-danger">Supprimer</button>
                 </form>

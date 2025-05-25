@@ -29,6 +29,11 @@ class RestaurantController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // Définir les dates de création et de mise à jour
+            $now = new \DateTime();
+            $restaurant->setCreatedAt($now);
+            $restaurant->setUpdatedAt($now);
+            
             $entityManager->persist($restaurant);
             $entityManager->flush();
 
